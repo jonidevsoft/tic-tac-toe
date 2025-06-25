@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"> <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="game-container">
+        <h1>🎮 Tic Tac Toe</h1>
+        <div id="controls">
+            <div class="control-group">
+                <label for="mode">Modo de juego:</label>
+                <select id="mode">
+                    <option value="bot">Jugador vs Máquina</option>
+                    <option value="pvp">Jugador vs Jugador</option>
+                </select>
+            </div>
+            
+            <div class="control-group" id="difficulty-control-group"> <label for="dificultad">Dificultad:</label>
+                <select id="dificultad">
+                    <option value="easy">Fácil</option>
+                    <option value="medium">Medio</option>
+                    <option value="hard">Difícil</option>
+                </select>
+            </div>
+        </div>
+        
+        <div id="board"></div>
+        <div id="status">Selecciona un modo y haz clic en Iniciar</div>
+        <div class="game-buttons"> <button id="start-button">Iniciar juego</button>
+            <button id="reset-button" disabled>Reiniciar</button>
+        </div>
+        
+        <div id="stats">
+            <div class="stat-item">
+                <span>🏆 Victorias</span>
+                <span id="wins" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span>😢 Derrotas</span>
+                <span id="losses" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span>🤝 Empates</span>
+                <span id="draws" class="stat-value">0</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="soundClick" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg" preload="auto"></audio>
+    <audio id="soundWin" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg" preload="auto"></audio>
+    <audio id="soundDraw" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg" preload="auto"></audio>
+
+</body>
+</html>
