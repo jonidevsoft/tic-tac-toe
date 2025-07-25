@@ -163,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () => {
             statusEl.textContent = "Tu turno (X)";
         } else {
             // Si el bot no encuentra un movimiento válido (tablero lleno o error en lógica)
-            // Esto debería ser raro con minimax y medium bot, pero puede pasar con easy si no hay espacios.
             if (board.every(cell => cell !== null)) {
                 handleGameEnd(null); // Si el tablero está lleno, es un empate.
             } else {
